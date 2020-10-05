@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var bal = 100;
+        do {
+            var num = prompt("Plase enter number:\n1.Deposit\n2.Withdraw\n3.Balance\n4.Exit");
+            if (num =="1"){
+                var num1 = prompt("How much do you want to deposit:");
+                bal += num1*1;
+                alert("Your balance: "+ bal);
+            }
+            if (num =="2"){
+                var num2 = prompt("How much do you want to withdraw:");
+                bal -= num2*1;
+                alert("Your balance: "+ bal);
+            }
+            if (num =="3"){
+                alert("Your balance: "+ bal);
+            }         
+        } while (num !== "4");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

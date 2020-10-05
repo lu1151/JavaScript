@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function addsum(num1, num2) {
+        //     var num1 = parseInt(prompt("Enter first number:"))
+        //     var num2 = parseInt(prompt("Enter second number:"))
+        //     alert(num1 + num2);
+        // }
+        // addsum();
+
+        // function max(num1, num2) {
+        //     var num1 = prompt("Enter first number:")
+        //     var num2 = prompt("Enter second number:")
+        //     if (num1 > num2) {
+        //         alert(num1);
+        //     } else {
+        //         alert(num2);
+        //     }
+        // }
+        // max();
+
+        // function max(num1, num2, num3) {
+        //     var num1 = prompt("Enter first number:")
+        //     var num2 = prompt("Enter second number:")
+        //     var num3 = prompt("Enter third number:")
+        //     var max = num1>num2?num1:num2;
+        //     max = max>num3?max:num3;
+        //     alert(max);
+        // }
+        // max();
+
+        // function prime(num) {
+        //     var num = prompt("Enter number:")
+        //     for (var i = 2; i < num; i++) {
+        //         if (num % i == 0) {
+        //             return alert("Not prime")
+        //         }
+        //     }
+        //     alert("Prime")
+        // }
+        // prime();
+
+        // function rev(arr) {
+        //     var str = [];
+        //     for (var i = arr.length - 1; i >= 0; i--) {
+        //         str[str.length] = arr[i];
+        //     }
+        //     return str;
+        // }
+        // console.log(rev([1,2,3,4,5,6]));
+
+        // function buble(arr) {
+        // for (var i = 0; i < arr.length; i++) {
+        //     for (var j = 0; j < arr.length - i; j++) {
+        //         if (arr[j] > arr[j + 1]) {
+        //             var temp = arr[j + 1];
+        //             arr[j + 1] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        // } return arr;
+        // }
+        // console.log(buble([5,9,7,12,0,23,65,6]));
+
+        function leapyear(year) {
+            if (year % 4 == 0 && year % 100 !== 0 || year % 400 == 0) {
+                return true;
+            }
+            return false;
+        }
+
+        function day() {
+            var year = prompt("Enter the year:")
+            if (leapyear(year)) {
+                alert("29");
+            } else {
+                alert("28")
+            }
+        }
+        console.log(day());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

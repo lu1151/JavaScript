@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(model, year) {
+            this.model=model;
+            this.year=year;
+            // this.drive = function(){
+            //     console.log("Driving away");
+            // }
+        }
+
+        Car.prototype.drive= function(){
+            console.log("Driving away");
+        }
+        var bmw = new Car("328i",2020);
+        var audi= new Car("A4",2019);
+
+        // console.log(bmw.drive===audi.drive);
+
+        bmw.drive();
+        audi.drive();
+
+        console.log(bmw.__proto__ === Car.prototype);
+
+    </script>
+</body>
+</html>

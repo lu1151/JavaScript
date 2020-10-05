@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(model, year) {
+            this.model = model;
+            this.year = year;
+        }
+        var that;
+        Car.prototype.drive = function () {
+            console.log("Driving away");
+            that = this;
+        }
+        var bmw = new Car("328i", 2020);
+        bmw.drive();
+        console.log(that === bmw);
+    </script>
+</body>
+
+</html>

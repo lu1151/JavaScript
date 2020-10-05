@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function countDown(time) {
+            var time0 = +new Date();    //Time now
+            var input = +new Date(time);    //Time till input Date 
+            var times = (input - time0)/1000;   //Covert into seconds 
+            var s = parseInt(times%60);     //Countdown seconds
+            s = s>=10?s:"0"+s;  //Add "0" to one digit number
+            var min = parseInt(times/60%60);    //Countdown minutes
+            min = min>=10?min:"0"+min;  //Add "0" to one digit number
+            var h = parseInt(times/60/60%60);   //Countdown hours
+            h = h>=10?h:"0"+h;  //Add "0" to one digit number
+            var d= parseInt(times/60/60/24);    //Countdown Days
+            d = d>=10?d:"0"+d;  //Add "0" to one digit number
+        return d+"Days "+h+"Hours "+min+"Minutes "+s+"Seconds"             
+        }
+        console.log(countDown("2020-09-20 00:00:00"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

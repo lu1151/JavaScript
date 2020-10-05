@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // constructor(model, year) {
+        //     this.model = model;
+        //     this.year = year;
+        // }
+        // // No ","
+        // topSpeed(speed) {
+        //     console.log(this.model + " top speed: " + speed);
+        // }
+        // }
+
+        // var bmw = new Car("328i", 2020);
+        // var audi = new Car("A4", 2019)
+
+        // console.log(bmw);
+        // console.log(audi);
+
+        // bmw.topSpeed("130mph");
+        // audi.topSpeed("128mph");
+
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+
+        class Son extends Father {
+            constructor(x, y) {
+                // super must before "this"
+                super(x, y);
+                this.x = x;
+                this.y = y;
+            }
+            subtract() {
+                console.log(this.x - this.y);
+            }
+        }
+
+        var son = new Son(22, 11);
+        son.sum();
+        son.subtract();
+    </script>
+</body>
+
+</html>
