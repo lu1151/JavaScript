@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.
+        // const regexp = new RegExp(/123/);
+        // console.log(regexp);
+
+        // 2.
+        // const rg = /123/;
+
+        // test()
+        // console.log(rg.test(123));
+        // console.log(rg.test(345));
+        // console.log(rg.test(12345));
+
+        // const rg = /^123/;
+        // console.log(rg.test(01234));
+        // console.log(rg.test(12345));
+
+        // const rg = /^abc$/;
+        // console.log(rg.test("abc"));
+        // console.log(rg.test("abcabc"));
+
+        // const rg = /[abc]/;
+        // console.log(rg.test("abcde"));
+        // console.log(rg.test("fghjs"));
+
+        // const rg = /^[a-c]$/;
+        // console.log(rg.test("abc"));
+        // console.log(rg.test("b"));
+
+        // const rg = /^[a-zA-z0-9-_]$/;
+        // console.log(rg.test("b"));
+        // console.log(rg.test("B"));
+        // console.log(rg.test("-"));
+        // console.log(rg.test("_"));
+        // console.log(rg.test(9));
+        // console.log(rg.test("ab"));
+        // console.log(rg.test("!"));
+
+        // const rg = /^[^a-zA-z0-9-_]$/;
+        // console.log(rg.test("b"));
+        // console.log(rg.test("B"));
+        // console.log(rg.test("-"));
+        // console.log(rg.test("_"));
+        // console.log(rg.test(9));
+        // console.log(rg.test("ab"));
+        // console.log(rg.test("!"));
+
+        // const rg = /^a*$/;
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+        // console.log(rg.test(""));
+        // console.log(rg.test("b"));
+        // console.log(rg.test(9));
+
+        // const rg = /^a+$/;
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+        // console.log(rg.test(""));
+
+        // const rg = /^a?$/;
+        // console.log(rg.test(""));
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+
+        // const rg = /^a{3}$/;
+        // console.log(rg.test(""));
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+
+        // const rg = /^a{3,}$/;
+        // console.log(rg.test(""));
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+        // console.log(rg.test("aaaaa"));
+
+        // const rg = /^a{3,5}$/;
+        // console.log(rg.test(""));
+        // console.log(rg.test("a"));
+        // console.log(rg.test("aaa"));
+        // console.log(rg.test("aaaaaa"));
+
+        const rg = /^[a-zA-z0-9-_]{6,10}$/;
+        console.log(rg.test("B"));
+        console.log(rg.test("_"));
+        console.log(rg.test(9));
+        console.log(rg.test("andy-red"));
+        console.log(rg.test("abcd87897"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .right {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="" class="uname"><span>Please enter username</span>
+    <script>
+        let uname = document.querySelector(".uname");
+        let span = document.querySelector("span");
+
+        const reg = /^[a-zA-Z0-9_-]{6,16}$/;
+        uname.onblur = function () {
+            if (reg.test(this.value)) {
+                span.className = "right";
+                span.innerHTML = "Right Format";
+            } else {
+                span.className = "wrong";
+                span.innerHTML = "Wrong Format";
+            }
+        }
+    </script>
+</body>
+
+</html>

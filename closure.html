@@ -8,7 +8,12 @@
 </head>
 
 <body>
-    
+    <ul class="nav">
+        <li>Audi</li>
+        <li>Benz</li>
+        <li>BMW</li>
+        <li>Tesla</li>
+    </ul>
     <script>
         // function fn() {
         //     var num = 10;
@@ -19,6 +24,57 @@
         // }
         // var f = fn();
         // f();
+
+        // Click li, show index 1(Better)
+        // var lis = document.querySelector(".nav").querySelectorAll("li");
+        // for (let i = 0; i < lis.length; i++) {
+        //     lis[i].index = i;
+        //     lis[i].addEventListener("click", function () {
+        //         console.log(this.index);
+        //     })
+        // }
+
+        // Click li, show index 2
+        // var lis = document.querySelector(".nav").querySelectorAll("li");
+        // for (let i = 0; i < lis.length; i++) {
+        //     (function (i) {
+        //         lis[i].onclick = function () {
+        //             console.log(i);
+        //         }
+        //     })(i);
+        // }
+
+        // Print all li after 3s
+        // var lis = document.querySelector(".nav").querySelectorAll("li");
+        // for (let i = 0; i < lis.length; i++) {
+        //     (function (i) {
+        //         setTimeout(function () {
+        //             console.log(lis[i].innerHTML);
+        //         }, 2000);
+        //     })(i);
+        // }
+
+        // Taxi: $13 3 miles and less, $5 for each mile after 3, trafic add $10 more
+        var car = (function () {
+            let start = 13;
+            let total = 0;
+            return {
+                price: function (n) {
+                    if (n <= 3) {
+                        total = start;
+                    } else {
+                        total = start + (n - 3) * 5;
+                    }
+                    return total;
+                },
+                trafic: function (flag) {
+                    return flag ? total + 10 : total;
+                }
+            }
+        }
+        )();
+        console.log(car.price(5));
+        console.log(car.trafic(true));
     </script>
 </body>
 

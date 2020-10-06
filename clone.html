@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            id: 1,
+            name: "Alex",
+            msg: {
+                age: 18
+            },
+            color: ["pink", "red", "blue"]
+        };
+        let o = {};
+
+        // Shallow Clone
+        // Object.assign(o, obj);
+
+
+        // Deep Clone
+        function dc(o, obj) {
+            for (let k in obj) {
+                let item = obj[k];
+                if (item instanceof Array) {
+                    o[k] = [];
+                    dc(o[k], item);
+                } else if (item instanceof Object) {
+                    o[k] = {};
+                    dc(o[k], item);
+                } else {
+                    o[k] = item;
+                }
+            }
+        }
+        dc(o,obj);
+
+        o.msg.age=20;
+        console.log(o);
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>
