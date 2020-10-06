@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        function fn() {
+            console.log("Hi");
+        }
+        fn();
+        fn.call();
+
+        // 2
+        var o = {
+            sayHi: function () {
+                console.log("Hi");
+            }
+        }
+        o.sayHi();
+
+        // 3
+        function Hello() { };
+        new Hello();
+
+        // 4
+        btn.onclick = function () { };
+
+        // 5
+        setInterval(function () { }, 1000);
+
+        // 6.Immediately Invoked Function Expression
+        (function () {
+            console.log("Hi");
+        })();
+    </script>
+</body>
+
+</html>
